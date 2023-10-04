@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    {% block extra_meta %}{% endblock %}
+
+    <title>Gtp 4 D&D</title>
+
+    {% block start_styles %}{% endblock %}
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/fadestyles.css' %}">
+
+    {% block extra_header %}{% endblock %}
+</head>
+
+<body style="overflow-x: hidden;">
+    {% include 'base/header.html' %}
+
+    {% block content %}
+
+    {% endblock %}
+
+    {% include 'base/footer.html' %}
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.js' %}"></script>
+    {% block end_body %}{% endblock %}
+</body>
+
+</html>
